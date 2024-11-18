@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px; /* Limit the maximum width */
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.footer-logo h1 {
+  margin: 0;
+  font-family: 'Great Vibes', cursive; 
+  font-size: 2.3rem; /* Adjust font size as needed */
+  font-weight: normal; /* Calligraphy fonts usually don't require bold */
+  /* margin-bottom: 10px; */
+  color: #fff; /* Set text color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.footer-links, .footer-social {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-links a, .footer-social a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-social a i {
+  font-size: 24px;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-logo {
+    margin-bottom: 10px;
+  }
+
+  .footer-links {
+    margin-bottom: 10px;
+  }
+
+  .footer-social {
+    margin-bottom: 10px;
+  }
+}

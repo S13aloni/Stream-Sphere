@@ -1,0 +1,122 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-image: url('/public/b1.jpg'); */
+}
+
+.signup-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  /* margin-top: 70px; */
+  position: relative;
+  background-image: url('/public/b1.jpg'); /* Define background image here */
+  background-size: cover; /* Make sure the background covers the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  min-height: 100vh; /* Ensure it covers the full height of the viewport */
+}
+
+.signup-form-card {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  width: 40%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.signup-form input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.signup-form input:focus {
+  outline: none; /* Remove default outline */
+  border: 3px solid transparent; /* Initial border */
+  animation: borderAnimation 1s forwards; /* Trigger the animation */
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-color: rgb(90, 32, 238);
+  }
+  20% {
+    border-color: rgb(255, 0, 93);
+  }
+  40% {
+    border-color: rgb(250, 4, 234);
+  }
+  60% {
+    border-color: rgb(250, 4, 234);
+  }
+  80% {
+    border-color: rgb(255, 0, 93);
+  }
+  100% {
+    border-color: rgb(90, 32, 238);
+  }
+}
+
+
+.signup-description {
+  margin: 20px 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.continue-btn {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: background 0.3s;
+}
+
+.continue-btn:hover {
+  background: #555;
+}
+
+.signin-link {
+  margin-top: 20px;
+}
+
+.signin-link a {
+  color: #6e9cf1;
+  text-decoration: none;
+}
+
+.signin-link a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .signup-page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .signup-form-card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,88 @@
+.enter-mobile-container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 40px;
+    text-align: center;
+    color: #fff;
+    background-color: #111;
+    border-radius: 12px;
+    /* box-shadow: 0 0 40px rgba(0, 0, 0, 0.6); */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.enter-mobile-container:hover {
+    /* transform: scale(1.05); */
+    box-shadow: 0 0 20px rgba(90, 32, 238, 0.8);
+    animation: shadowAnimation 1s infinite linear;
+}
+
+@keyframes shadowAnimation {
+    0% {
+      box-shadow: 0 0 10px 0 rgb(90, 32, 238);
+    }
+    25% {
+      box-shadow: 0 0 10px 0 rgb(255, 0, 93);
+    }
+    50% {
+      box-shadow: 0 0 10px 0 rgb(250, 4, 234);
+    }
+    75% {
+      box-shadow: 0 0 10px 0 rgb(255, 0, 93);
+    }
+    100% {
+      box-shadow: 0 0 10px 0 rgb(90, 32, 238);
+    }
+}
+
+
+.mobile-heading {
+    color: white;
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+.mobile-label, .otp-label {
+    color: #ccc;
+    font-size: 18px;
+}
+
+.mobile-input, .otp-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #222;
+}
+
+.send-otp-button, .otp-submit-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgb(90, 32, 238), rgb(255, 0, 93), rgb(250, 4, 234), rgb(250, 4, 234), rgb(255, 0, 93), rgb(90, 32, 238));
+    background-size: 300% 100%;  
+    color: #fff;
+    cursor: pointer;
+    transition: background-position 0.6s ease; 
+    background-position: left center;
+}
+
+.send-otp-button:hover, .otp-submit-button:hover {
+  background-position: right center; /* Background position on hover */
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.timer {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px){
+  .enter-mobile-container{
+    margin-top: 50%;
+    margin-bottom: 50%;
+  }
+}

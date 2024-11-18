@@ -1,0 +1,83 @@
+/* Web Series Showcase Grid */
+.webseries-showcase-container-filter {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.webseries-title-filter {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #C71585; /* Purplish Magenta */
+  margin-bottom: 30px;
+}
+
+/* Genre Filter Buttons */
+.genre-filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filter-button {
+  background-color: #C71585; /* Purplish Magenta */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-button.active {
+  background-color: #9B2A6B; /* Slightly darker purplish magenta for active state */
+}
+
+.filter-button:hover {
+  background-color: #E7549F; /* Slightly lighter purplish magenta for hover */
+}
+
+/* Grid layout for web series cards */
+.webseries-grid-filter {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.webseries-card-filter {
+  background-color: #1c1c1c;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.webseries-card-filter:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+.webseries-image-filter {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 4px solid #C71585; /* Purplish Magenta border */
+}
+
+.webseries-name-filter {
+  font-size: 1.2rem;
+  margin: 10px 15px;
+  color: #C71585; /* Purplish Magenta */
+}
+
+.webseries-genre-filter, .webseries-rating-filter, .webseries-year-filter {
+  font-size: 1rem;
+  margin: 5px 15px;
+}
+
+.webseries-genre-filter {
+  /* padding-left: 5%; */
+  color: white; /* Purplish Magenta */
+}

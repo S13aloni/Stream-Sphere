@@ -1,0 +1,89 @@
+/* NetBankingPayment.css */
+.net-banking-payment-container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 40px;
+    background-color: #111;
+    border-radius: 12px;
+    /* box-shadow: 0 0 40px rgba(0, 0, 0, 0.6); */
+    text-align: left;
+    color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.net-banking-payment-container:hover {
+    /* transform: scale(1.05); */
+    box-shadow: 0 0 20px rgba(90, 32, 238, 0.8);
+    animation: shadowAnimation 1s infinite linear;
+}
+
+@keyframes shadowAnimation {
+    0% {
+      box-shadow: 0 0 10px 0 rgb(90, 32, 238);
+    }
+    25% {
+      box-shadow: 0 0 10px 0 rgb(255, 0, 93);
+    }
+    50% {
+      box-shadow: 0 0 10px 0 rgb(250, 4, 234);
+    }
+    75% {
+      box-shadow: 0 0 10px 0 rgb(255, 0, 93);
+    }
+    100% {
+      box-shadow: 0 0 10px 0 rgb(90, 32, 238);
+    }
+}
+
+
+
+h1.net-banking-heading {
+    color: purple;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.net-banking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.net-banking-label {
+    color: #ddd;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.net-banking-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #222;
+    color: #f9f9f9;
+}
+
+.net-banking-input::placeholder {
+    color: #aaa;
+}
+
+.net-banking-submit-button {
+    background: linear-gradient(90deg, rgb(90, 32, 238), rgb(255, 0, 93), rgb(250, 4, 234), rgb(250, 4, 234), rgb(255, 0, 93), rgb(90, 32, 238));
+    background-size: 300% 100%;   
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-position 0.6s ease; 
+    background-position: left center;}
+
+.net-banking-submit-button:hover {
+  background-position: right center; /* Background position on hover */
+  color: #fff;
+  transform: scale(1.05);
+}

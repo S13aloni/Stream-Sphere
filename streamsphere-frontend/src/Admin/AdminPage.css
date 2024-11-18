@@ -1,0 +1,145 @@
+.admin-page {
+    padding: 30px;
+    max-width: 800px;
+    margin: auto;
+    background-color: black;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    color: #f5f5f5;
+    text-align: center;
+    margin-top: 20px;
+    border: 2px solid #fff; /* White border around the entire group */
+
+}
+
+.admin-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.admin-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin-card {
+    background: linear-gradient(to bottom, #010738, hsl(320, 97%, 13%));
+    padding: 20px;
+    border-radius: 12px;
+    width: 45%;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* height: 300px; */
+}
+
+.admin-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(90, 32, 238, 0.8);
+    animation: shadowAnimation 1s infinite linear;
+}
+
+@keyframes shadowAnimation {
+    0% {
+      box-shadow: 0 0 10px 0 rgb(90, 32, 238);
+    }
+    25% {
+      box-shadow: 0 0 10px 0 rgb(255, 0, 93);
+    }
+    50% {
+      box-shadow: 0 0 10px 0 rgb(250, 4, 234);
+    }
+    75% {
+      box-shadow: 0 0 10px 0 rgb(255, 0, 93);
+    }
+    100% {
+      box-shadow: 0 0 10px 0 rgb(90, 32, 238);
+    }
+  }
+
+.admin-card h3 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.admin-card p {
+    color: #bbb;
+}
+
+.admin-form {
+    margin-top: 20px;
+}
+
+.admin-form h2 {
+    margin-bottom: 20px;
+    color: palevioletred;
+}
+
+.admin-form input, .admin-form textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    background-color: #2c2c2c;
+    color: #f5f5f5;
+    border: 1px solid #444;
+    border-radius: 8px;
+}
+
+.admin-form input:focus, .admin-form textarea:focus {
+    border-color: plum;
+    outline: none;
+}
+
+.admin-form .submit-btn {
+    background: linear-gradient(90deg, rgb(90, 32, 238), rgb(255, 0, 93), rgb(250, 4, 234), rgb(250, 4, 234), rgb(255, 0, 93), rgb(90, 32, 238));
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    background-position: left center; /* Initial background position */
+    background-size: 300% 100%; /* Ensure the gradient covers the button*/
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.admin-form .submit-btn:hover {
+    background-position: right center;
+    transform: translateY(-2px);
+}
+
+.btn-admin {
+    padding: 12px 24px;
+    background-color: #007bff; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    float: left;
+  }
+  
+  .btn-admin:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly increases size on hover */
+  }
+  
+  .btn-admin:active {
+    background-color: #003f7f; /* Even darker blue on click */
+    transform: scale(0.98); /* Slightly reduces size on click */
+  }
+  
+  .btn-admin:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4); /* Adds focus outline */
+  }
+  

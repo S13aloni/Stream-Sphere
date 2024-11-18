@@ -1,0 +1,181 @@
+
+/* General Styling */
+.about-container {
+  background-color: #111;
+  color: #f1f1f1;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section */
+.about-hero {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.about-heading {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.about-subheading {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #f1f1f1;
+  opacity: 0.85;
+}
+
+/* About Content */
+.about-content {
+  padding: 50px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.about-card {
+  background: linear-gradient(to bottom, #010738, hsl(320, 97%, 13%));
+  padding: 30px;
+  margin: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-card:hover {
+  box-shadow: 0 0 20px rgba(90, 32, 238, 0.8);
+  animation: shadowAnimation 1s infinite linear;
+  transform: scale(1.05);
+}
+
+@keyframes shadowAnimation {
+  0% {
+    box-shadow: 0 0 10px 0 rgb(90, 32, 238);
+  }
+  25% {
+    box-shadow: 0 0 10px 0 rgb(255, 0, 93);
+  }
+  50% {
+    box-shadow: 0 0 10px 0 rgb(250, 4, 234);
+  }
+  75% {
+    box-shadow: 0 0 10px 0 rgb(255, 0, 93);
+  }
+  100% {
+    box-shadow: 0 0 10px 0 rgb(90, 32, 238);
+  }
+}
+
+.about-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #fff; /* Change heading color to white for better contrast */
+}
+
+.about-card p,
+.about-card ul {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.about-card ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about-card ul li {
+  margin-bottom: 8px;
+}
+
+/* Team Section */
+.about-team {
+  background-color: #333;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.team-heading {
+  font-size: 2.5rem;
+  color: #ff4b2b;
+  margin-bottom: 40px;
+}
+
+.team-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  text-align: center;
+  margin: 20px;
+}
+
+.team-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 5px solid #ff416c;
+}
+
+.team-member h3 {
+  font-size: 1.5rem;
+  color: #ff416c;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Footer Message Section */
+.about-footer-message {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #222;
+}
+
+.about-footer-message p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.join-button {
+  background-color: #ff416c;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+  background-color: #ff4b2b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-card, .team-member {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .about-hero {
+    padding: 80px 20px;
+  }
+
+  .about-heading {
+    font-size: 2.5rem;
+  }
+
+  .about-subheading {
+    font-size: 1.2rem;
+  }
+}

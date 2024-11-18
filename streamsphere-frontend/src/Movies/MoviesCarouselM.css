@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.div-timeline{
+    padding: 20px;
+    margin-top: 70px;
+}
+
+.heading-webcare{
+    font-family: 'Great Vibes', cursive; 
+    font-size: 2.5rem; /* Adjust font size as needed */
+    font-weight: normal; 
+    color: white;
+    text-align: center;
+}
+.timeline {
+    padding: 20px;
+}
+
+.timeline-item {
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.timeline-content {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+    color: white; /* Set text color to white */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.timeline-content:hover {
+    background-color: #e0e0e0;
+}
+
+.timeline-content img {
+    width: 100%;
+    border-radius: 5px;
+    height: 200px; /* Adjust height if needed */
+    object-fit: cover; /* Ensure images fit well */
+}
+
+/* Add a hover effect for the link */
+.timeline-content:hover h4,
+.timeline-content:hover p {
+    color: white; /* Change text color on hover if needed */
+}

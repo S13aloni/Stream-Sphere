@@ -1,0 +1,112 @@
+/* Styling the main container */
+.search-h1 {
+  text-align: center;
+  margin-top: 90px;
+  font-size: 2rem;
+  
+  /* Use background image to apply gradient */
+  background: linear-gradient(to right, #b11d82, rgb(12, 3, 86));
+  
+  /* Clip the background to the text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Make the text itself transparent */
+  
+  /* Enable gradient background for text in Firefox */
+  background-clip: text;
+  color: transparent;
+}
+
+
+/* Grid layout for the cards */
+.search-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.search-card {
+  background: linear-gradient(to bottom, #010738, hsl(320, 97%, 13%));
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Light shadow effect */
+  transition: transform 0.3s ease;
+  width: 30%; /* Adjust width for 3 cards per row */
+  cursor: pointer; /* Add pointer cursor to indicate it's clickable */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hover effect for cards */
+.search-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+.search-h2 {
+  font-size: 1.8rem;
+  color: white;
+  margin: 5px 0;
+}
+
+.search-p {
+  margin-top: 2px;
+  color: #ccc; /* Light grey color for genre */
+  font-size: 1.3rem;
+}
+
+/* Responsive Image Styling */
+.result-image {
+  width: 100%; /* Make the image responsive */
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1250px) {
+  .search-card{
+    margin: 20px;
+  }
+}
+
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .search-card {
+    width: 45%; /* 2 cards per row on tablets */
+    margin: 20px;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .search-h1 {
+    font-size: 1.5rem; /* Adjust heading size for smaller screens */
+    margin-top: 15px;
+  }
+
+  .search-grid {
+    justify-content: center; /* Center the cards on small screens */
+  }
+
+  .search-card {
+    width: 100%; /* 1 card per row on mobile */
+    margin-bottom: 20px;
+    margin: 20px;
+  }
+
+  .search-h2 {
+    font-size: 1.5rem; /* Adjust card title font size */
+  }
+
+  .search-p {
+    font-size: 1.1rem; /* Adjust font size for smaller screens */
+  }
+}

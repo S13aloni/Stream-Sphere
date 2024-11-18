@@ -1,0 +1,134 @@
+.payment-success-container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 40px;
+    text-align: center;
+    color: #fff;
+    background-color: #111;
+    border-radius: 12px;
+    /* box-shadow: 0 0 40px rgba(0, 0, 0, 0.6); */
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.payment-success-container:hover {
+    /* transform: scale(1.05); */
+    box-shadow: 0 0 20px rgba(90, 32, 238, 0.8);
+    animation: shadowAnimation 1s infinite linear;
+}
+
+@keyframes shadowAnimation {
+    0% {
+      box-shadow: 0 0 10px 0 rgb(90, 32, 238);
+    }
+    25% {
+      box-shadow: 0 0 10px 0 rgb(255, 0, 93);
+    }
+    50% {
+      box-shadow: 0 0 10px 0 rgb(250, 4, 234);
+    }
+    75% {
+      box-shadow: 0 0 10px 0 rgb(255, 0, 93);
+    }
+    100% {
+      box-shadow: 0 0 10px 0 rgb(90, 32, 238);
+    }
+}
+
+.headingPay {
+    color: purple;
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+.pPay {
+    color: #ccc;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.success-icon {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgb(90, 32, 238), rgb(250, 4, 234), rgb(90, 32, 238));
+    background-size: 200% 100%; /* Make the background bigger to enable sliding */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: circle-animation 2s forwards, gradient-slide 5s infinite linear;
+}
+
+@keyframes circle-animation {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes gradient-slide {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+
+.tick-symbol {
+    position: absolute;
+    top: 1px;
+    left: 20px;
+    font-size: 80px;  /* Adjust tick symbol size */
+    color: white;     /* Tick mark color */
+    opacity: 0;
+    animation: tick-animation 1s 1.5s forwards; /* Appear after the circle animation */
+}
+
+@keyframes circle-animation {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes tick-animation {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.done .circle {
+    animation: none;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.done .tick-symbol {
+    animation: none;
+    opacity: 1;
+    transform: scale(1);
+}

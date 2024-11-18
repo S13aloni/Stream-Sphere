@@ -1,0 +1,80 @@
+/* ChangeMobile.css */
+.customer-update-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Black background for the page */
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.customer-update-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ff4081; /* A highlight color for the heading */
+}
+
+.customer-update-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: #222; /* Dark background for the form */
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.customer-update-label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #ff4081; /* Label color to match the theme */
+}
+
+.customer-update-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff; /* White input background */
+    color: #000; /* Black text color */
+}
+
+.customer-update-input:focus {
+    outline: none;
+    border: 2px solid #ff4081; /* Highlight on focus */
+}
+
+.customer-update-button {
+    padding: 10px 20px;
+    background-color: #ff4081; /* Same theme color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.customer-update-button:hover {
+    background-color: #ff1a73; /* Darker shade on hover */
+}
+
+.customer-update-message {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.customer-update-message-error {
+    color: #ff4d4d; /* Red for error messages */
+}
+
+.customer-update-message-success {
+    color: #4caf50; /* Green for success messages */
+}

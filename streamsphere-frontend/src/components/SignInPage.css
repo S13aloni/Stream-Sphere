@@ -1,0 +1,250 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black ;
+}
+  
+.signin-page {
+    position: relative;
+    height: 100vh;
+}
+  
+.signin-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/public/main.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Overlay to darken the background without affecting the text */
+.signin-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+  
+.signin-overlay {
+    position: relative;
+    z-index: 2; /* Ensure this is above the overlay */
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    top: 30%;
+}
+  
+.signin-overlay h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #f2f2f2; /* Dark white color */
+}
+  
+.signin-overlay h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #f2f2f2; /* Dark white color */
+}
+  
+.signin-overlay p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+  
+.signin-form input {
+    padding: 15px;
+    width: 60%;
+    max-width: 400px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: none;
+    font-size: 1rem;
+}
+  
+.get-started-btn, .create-account-btn {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+  
+.get-started-btn {
+    background: linear-gradient(90deg, rgb(90, 32, 238), rgb(255, 0, 93), rgb(250, 4, 234), rgb(250, 4, 234), rgb(255, 0, 93), rgb(90, 32, 238));
+    color: #fff;
+    margin-left: 10px;
+    background-position: left center; /* Initial background position */
+    background-size: 300% 100%; /* Ensure the gradient covers the button */
+}
+  
+.get-started-btn:hover {
+    /* background-color: #f40612; */
+    background-position: right center;
+}
+  
+.create-account-btn {
+  background: linear-gradient(90deg, rgb(90, 32, 238), rgb(255, 0, 93), rgb(250, 4, 234), rgb(250, 4, 234), rgb(255, 0, 93), rgb(90, 32, 238));
+  color: #fff;
+  margin-top: 1px;
+  background-position: left center; /* Initial background position */
+  background-size: 300% 100%; /* Ensure the gradient covers the button*/
+}
+  
+.create-account-btn:hover {
+  background-position: right center;
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at the original position */
+    }
+}
+
+.signin-overlay h1,
+.signin-overlay h5,
+.signin-overlay p {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Delay for the sub-elements for a staggered effect */
+.signin-overlay h2 {
+    animation-delay: 0.5s;
+}
+
+.signin-overlay p {
+    animation-delay: 1s;
+}
+
+/* Curved red line styles */
+.curve-line {
+    position: relative;
+    height: 60px;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .curve-line::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, red,rgb(1, 1, 53),black, transparent);
+    border-radius: 50% 50% 0 0; /* Top curves */
+    z-index: 1;
+  }
+
+
+.cards-container-signin {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Space between cards */
+    padding: 20px;
+    border: 2px solid #fff; /* White border around the entire group */
+    border-radius: 10px; /* Rounded corners for the container */
+    margin: 50px;
+  }
+  
+  .card-signin {
+    background: linear-gradient(to bottom, #010738, hsl(320, 97%, 13%));
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 23%;
+    /* text-align: center; */
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden; 
+  }
+
+  .card-signin h3{
+    font-weight: bold;
+  }
+
+  .card-signin p
+  {
+    margin-bottom: 100px;
+  }
+  
+  .card-signin:hover {
+    box-shadow: 0 0 20px rgba(90, 32, 238, 0.8);
+    animation: shadowAnimation 1s infinite linear;
+  }
+
+  .card-icon-signin {
+    position: absolute;
+    bottom: 10px; /* Space from the bottom edge */
+    right: 10px; /* Space from the right edge */
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    border-radius: 50%; /* Make the image circular */
+  }
+  
+  @keyframes shadowAnimation {
+    0% {
+      box-shadow: 0 0 10px 0 rgb(90, 32, 238);
+    }
+    25% {
+      box-shadow: 0 0 10px 0 rgb(255, 0, 93);
+    }
+    50% {
+      box-shadow: 0 0 10px 0 rgb(250, 4, 234);
+    }
+    75% {
+      box-shadow: 0 0 10px 0 rgb(255, 0, 93);
+    }
+    100% {
+      box-shadow: 0 0 10px 0 rgb(90, 32, 238);
+    }
+  }
+
+  
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .signin-overlay {
+        top: 20%;
+    }
+  
+    .signin-overlay h1 {
+        font-size: 2rem;
+    }
+  
+    .signin-overlay h2 {
+        font-size: 1.2rem;
+    }
+  
+    .signin-form input {
+        width: 80%;
+    }
+
+    .cards-container-signin {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .card-signin {
+        width: 80%;
+        margin-bottom: 20px;
+      }
+}

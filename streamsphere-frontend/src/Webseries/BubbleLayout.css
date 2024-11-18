@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.div-toprated {
+  padding: 20px;
+}
+
+.bubble-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bubble {
+  width: 200px;
+  height: 200px;
+  margin: 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.bubble:hover {
+  transform: scale(1.1);
+}
+
+.h1-bubble{
+  color: white;
+  font-family: 'Great Vibes', cursive; 
+  font-size: 2.3rem;
+  font-weight: normal;
+}
+
+.bubble img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5); /* Transparent background */
+  color: white;
+  text-align: center;
+  opacity: 0;
+  height: 40%;
+  transition: opacity 0.3s;
+  padding: 5px 0;
+}
+
+.bubble:hover .title-overlay {
+  opacity: 1; /* Show title on hover */
+}
+
+/* Ranking Number Styles */
+.ranking-number {
+  position: absolute;
+  top: 15px; /* Adjust to position the number */
+  left: 35px; /* Adjust to position the number */
+  font-size: 24px; /* Adjust font size */
+  color: white; /* Change color as needed */
+  font-weight: bold; /* Make it stand out */
+  z-index: 1; /* Ensure it's above the bubble */
+  background-color: rgba(0, 0, 0, 0.7); 
+  /* Optional: semi-transparent background */
+  border-radius: 50%; /* Optional: rounded number */
+  padding: 5px; /* Optional: space around number */
+}

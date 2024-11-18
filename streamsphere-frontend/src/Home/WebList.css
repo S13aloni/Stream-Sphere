@@ -1,0 +1,185 @@
+/* Container for the entire carousel */
+.movie-carousel-container {
+    position: relative;
+    padding: 20px;
+    background-color: #000; /* Dark background */
+    color: white; /* White text for the whole component */
+  }
+  
+  /* Heading for the carousel */
+  .movie-heading {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white; /* White heading */
+  }
+  
+  /* Carousel wrapper */
+  .movie-carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 500px; /* Height for carousel */
+  }
+  
+  /* Flexbox for movie list */
+  .movie-list {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.5s ease;
+    width: auto; /* Allow width to adjust based on cards */
+    padding-left: 70px;
+    justify-content: flex-start;
+  }
+  
+  /* Style for each carousel button (previous and next) */
+  .carousel-button {
+    background-color: #333; /* Same as card background */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+    transition: background-color 0.3s;
+  }
+  
+  .carousel-button:hover {
+    background-color: #555;
+  }
+  
+  .prev-button {
+    left: 10px;
+  }
+  
+  .next-button {
+    right: 10px;
+  }
+  
+  /* Movie card styling */
+  .movie-card {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 470px;
+    margin: 0 10px 0 0;
+    background-color: #333; /* Dark gray for movie cards */
+    color: white; /* White text */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+  }
+  
+  /* Image in the movie card */
+  .movie-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #555;
+  }
+  
+  /* Movie information section */
+  .movie-info {
+    padding: 10px;
+    height: calc(100% - 120px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  /* Movie title styling */
+  .movie-info .movie-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white; /* White movie title */
+  }
+  
+  /* Movie meta data (year, duration) */
+  .movie-info .movie-meta {
+    font-size: 0.9em;
+    color: #aaa; /* Light gray for meta details */
+    margin-bottom: 10px;
+  }
+  
+  /* Quality button */
+  .quality-btn {
+    background-color: #f00; /* Red button like Netflix */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    border-radius: 5px;
+  }
+  
+  /* Trending number indicator */
+  .trending-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #f00; /* Netflix-like red */
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 50%;
+  }
+  
+  /* Responsive design adjustments */
+  
+  /* Large screen adjustments (up to 2000px) */
+  @media (min-width: 2000px) {
+    .movie-carousel {
+      height: 600px;
+    }
+    .movie-card {
+      width: 450px;
+      height: 500px;
+      margin-right: 40px;
+    }
+  }
+  
+  /* Extra large screen adjustments (up to 2500px) */
+  @media (min-width: 2500px) {
+    .movie-list {
+      justify-content: space-between;
+      padding-left: 0;
+    }
+    .movie-card {
+      width: 500px;
+      height: 550px;
+    }
+  }
+  
+  /* Tablet and mobile adjustments (max-width: 768px) */
+  @media (max-width: 768px) {
+    .movie-heading {
+      font-size: 1.5em;
+    }
+  
+    .movie-list {
+      justify-content: center;
+      padding-left: 0;
+    }
+  
+    .movie-card {
+      width: 280px;
+      height: 400px;
+    }
+  
+    .movie-card img {
+      height: 180px;
+    }
+  
+    .movie-info {
+      height: calc(100% - 100px);
+    }
+  }
+  

@@ -1,0 +1,55 @@
+
+  /* Masonry Layout */
+  .masonry-layout {
+    column-count: 4;
+    column-gap: 15px;
+    margin: 40px 0;
+  }
+  
+  .masonry-link {
+    display: block; /* Make the link fill the entire item */
+    text-decoration: none; /* Remove the underline */
+    color: inherit; /* Inherit color from parent to keep the text color consistent */
+}
+
+  .masonry-item {
+    break-inside: avoid;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .masonry-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .masonry-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .masonry-item h4 {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+
+  @media (max-width: 1200px) {
+    .masonry-layout {
+      column-count: 3;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .masonry-layout {
+      column-count: 2;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .masonry-layout {
+      column-count: 1;
+    }
+  }
+  

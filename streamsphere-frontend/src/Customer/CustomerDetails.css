@@ -1,0 +1,140 @@
+.customer-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #000; /* Black background */
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white; /* Make text white for visibility */
+    margin-top: 80px;
+  }
+
+  .error-cust-det{
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+  }
+  
+  .user-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .user-info {
+    display: flex; /* Ensures the icon and the name are side by side */
+    align-items: center; /* Vertically aligns the icon and the text */
+}
+
+  .user-icon {
+    font-size: 5rem;
+    border: 4px solid white;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff4081, #82B1FF);
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: transform 0.5s;
+    margin-right: 15px;
+  }
+
+  .user-name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0; /* Removes any unwanted margin */
+}
+  
+  .user-icon:hover {
+    transform: rotateY(180deg);
+  }
+  
+  .details-section {
+    width: 100%;
+    max-width: 800px;
+    background-color: #222; /* Dark gray for contrast */
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .email-section, .password-section {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between; /* Keep email/password and button in one line */
+    align-items: center;
+  }
+  
+  .p-detail {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .change-button, .back-button {
+    width: 150px; /* Set the same width for all buttons */
+    padding: 10px 20px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+    transition: background-color 0.3s;
+    font-size: 1rem; /* Consistent font size */
+}
+
+.change-button:hover, .back-button:hover {
+    background-color: #ff1a73;
+}
+
+.eye-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+  
+  .edit-email, .edit-password {
+    margin-top: 1rem;
+  }
+  
+  /* input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  } */
+  
+  /* button {
+    padding: 10px 20px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #ff1a73;
+  }
+  
+  .back-button {
+    margin-top: 2rem;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .back-button:hover {
+    background-color: #555;
+  }
+   */

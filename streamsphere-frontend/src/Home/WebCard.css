@@ -1,0 +1,102 @@
+/* MovieCard Container */
+.movie-card-homepg {
+  background-color: #333; /* Dark gray background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin: 10px;
+  color: white; /* White text */
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  width: 280px; /* Adjust card width */
+  height: auto; /* Automatic height */
+}
+
+/* Hover effect for cards */
+.movie-card-homepg:hover {
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image inside the movie card */
+.movie-image {
+  width: 100%; /* Make the image span the full width */
+  height: 200px;
+  object-fit: cover; /* Ensure the image covers the entire area */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Movie Information Container */
+.movie-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Movie title */
+.movieTitleMC {
+  font-size: 1.4em;
+  margin: 0;
+  font-weight: bold;
+  color: white; /* White text for the title */
+}
+
+/* Movie genre styling */
+.movie-genre {
+  font-size: 1em;
+  color: rgba(208, 203, 203, 0.8); /* Lighter gray for genre text */
+}
+
+/* Movie details (rating, duration, year) */
+.movie-details {
+  font-size: 0.9em;
+  color: rgba(208, 203, 203, 0.8); /* Lighter gray */
+}
+
+/* Display each detail on a new line */
+.movie-details span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Quality button styling */
+.movie-quality {
+  background-color: #f00; /* Netflix-like red for quality button */
+  color: white;
+  padding: 5px 8px;
+  font-size: 0.8em;
+  border-radius: 5px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+/* Responsive Design */
+
+/* Adjustments for smaller screens (max width 768px) */
+@media (max-width: 768px) {
+  .movie-card {
+      width: 240px; /* Smaller width for mobile devices */
+  }
+
+  .movie-image {
+      height: 180px; /* Adjust image height for mobile */
+  }
+
+  .movieTitleMC {
+      font-size: 1.2em; /* Adjust title size */
+  }
+}
+
+/* Adjustments for large screens (min width 1200px) */
+@media (min-width: 1200px) {
+  .movie-card {
+      width: 350px; /* Larger width for larger screens */
+  }
+
+  .movie-image {
+      height: 240px; /* Adjust image height for larger screens */
+  }
+}

@@ -1,0 +1,79 @@
+/* Thriller Series Section */
+.thriller-series-section {
+  margin: 40px 0;
+  padding: 0 20px;
+}
+
+.thriller-title {
+  font-size: 2.5rem;
+  color: white; /* Purplish Magenta */
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+/* Series Grid */
+.series-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.series-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.series-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.series-card:hover {
+  transform: scale(1.05);
+}
+
+/* Series Info */
+.series-info {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  bottom: -20px; /* Move the info container lower to reveal more of the image */
+  width: 100%;
+  padding: 20px 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 60px;
+  overflow: hidden;
+}
+
+.series-card:hover .series-info {
+  bottom: 0;
+  height: auto;
+  padding: 20px 10px;
+}
+
+.series-info h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.series-info p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 1200px) {
+  .series-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .series-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}

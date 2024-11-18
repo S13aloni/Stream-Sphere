@@ -1,0 +1,157 @@
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.headingContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  flex-wrap: wrap;
+}
+
+.headingIconContainer {
+  display: flex;
+  align-items: center;
+}
+
+.carouselHeading {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: white;
+  text-align: left;
+}
+
+.thunderIcon {
+  font-size: 2rem;
+  color: yellow;
+  /* border-color: #ff6500; */
+  margin-left: 10px;
+}
+
+.seeAllButton {
+  background: linear-gradient(90deg,rgb(90, 32, 238),rgb(255, 0, 93), rgb(250, 4, 234),rgb(250, 4, 234),rgb(255, 0, 93),rgb(90, 32, 238));
+  background-size: 300%;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-position 0.5s ease;
+}
+
+.seeAllButton:hover {
+  background-position: right;
+}
+
+
+.carouselWrapper {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+/* Apply animation to the carousel only */
+.Carousel {
+  display: flex;
+  animation: move 25s linear infinite;
+  background-color: black;
+  padding-bottom: 20px;
+}
+
+/* Pause the animation when hovering over the carouselWrapper */
+.carouselWrapper:hover .Carousel {
+  animation-play-state: paused;
+}
+
+.carouselItem {
+  position: relative;
+  width: 500px;
+  height: 400px;
+  margin: 0 15px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carouselItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.carouselDetails {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.carouselItem:hover .carouselDetails {
+  opacity: 1;
+}
+
+.movieTitle {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.movieRating {
+  margin-bottom: 10px;
+}
+
+.ratingStar {
+  font-size: 1rem;
+  color: gold;
+  margin-right: 2px;
+}
+
+.movieDescription {
+  font-size: 1rem;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .headingContainer {
+    padding: 0 20px;
+  }
+
+  .carouselHeading {
+    font-size: 1.5rem;
+  }
+
+  .thunderIcon {
+    font-size: 1.5rem;
+    margin-left: 5px;
+  }
+
+  .seeAllButton {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
